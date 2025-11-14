@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	font-size: 20px;
+	margin: 0px;
+	overflow-x: hidden;
+
+	background-image: url(multimidia/imagemFundo.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: centercenter;
+	background-attachment: fixed;
+}
+
+@media (max-width: 750px) {
+	body {
+		background-image: none;
+		background-color: #000000;
+	}
+}
+
+@media (max-width: 320px) {
+	body {
+		background-image: none;
+		background-color: #000000;
+	}
+}
+
+
+/*formatacoes da nav*/
+nav {
+	font: bold 20px Andale Mono, monospace;
+	text-decoration: none;
+	word-spacing: 0.7em;
+	color: rgb(65, 58, 58);
+
+	background-color: #ffb326;
+
+	top: 0;
+	width: 100%;
+	position: fixed;
+
+	padding: 0.5em;
+	padding-left: 0.7em;
+
+	z-index: 10;
+}
+
+nav a:link{
+	text-decoration: inherit;
+	color: darkred;
+}
+
+nav a:visited{
+	text-decoration: inherit;
+	color: darkred;
+}
+
+nav a:hover{
+	text-decoration: underline;
+	color: #d2691e;
+}
+/*formatacoes da nav*/
+
+/*titulo do index*/
+@keyframes tituloPrincipal {
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+#tituloValve{
+	margin-top: 1em;
+	margin-bottom: 0;
+	font: bold 4.5em "Oxanium", sans-serif;
+	text-align: center;
+	font-size: 4.5em;
+
+	background: linear-gradient(to right,#ad4800, #ff7308, #ffd000); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+	animation: tituloPrincipal 3s;
+	transition: font-size 0.5s;
+}
+
+#tituloValve:hover{
+	background: linear-gradient(to left,#ad4800, #ff7308, #ffd000); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+	font-size: 4.6em;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    #tituloValve {
+        font-size: 3.5em;
+		animation: none;
+		transition: none;
+		transform: none;
+    }
+
+	#tituloValve:hover {
+		font-size: 1em;
+	}
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+    #tituloValve {
+		animation: none;
+		transition: none;
+		transform: none;
+        font-size: 2.5em;
+    }
+
+	#tituloValve:hover {
+		font-size: 1em;
+	}
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 320px) {
+    #tituloValve {
+        font-size: 2em;
+		animation: none;
+		transition: none;
+		transform: none;
+    }
+
+	#tituloValve:hover {
+		font-size: 1em;
+	}
+}
+
+
+/*titulo do index*/
+
+/*blocos texto*/
+.blocosTexto {
+	width: 65%;
+
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 4.5em;
+
+	padding: 1.5em;
+	padding-top: 1em;
+
+	box-shadow: 0.4em 0.4em 0.6em #ff9100 ;
+	background-color: #000000;
+
+	border: 0.1em solid #ff8800;
+	border-radius: 1em;
+
+	font: 0.8em "Albert Sans", sans-serif;
+	text-align: justify;
+	text-indent: 1em;
+
+	color: #ffffff;
+}
+
+.blocosTexto h2{
+	font: bold 1.8em "Oxanium", sans-serif;;
+	text-align: center;
+	color: #fdba00;
+}
+
+.blocosTexto h3{
+	font: bold 1.3em "Oxanium", sans-serif;;
+	text-align: center;
+	color: #fdba00;
+}
+
+@media (max-width: 1000px) {
+	.blocosTexto {
+		width: 85%;
+	}
+}
+
+.divImagens{
+	display: flex;
+	justify-content: center; 
+	align-items: center;     
+	gap: 1em;
+	text-wrap: wrap;
+	
+	margin-top: 2.5em;
+	margin-bottom: 2.5em;
+}
+
+.divImagens img{
+	width: auto;
+	height: 10em;
+	border: 0.1em solid #da8300;
+	border-radius: 0.5em;
+
+	transition: transform 0.5s ease;
+}
+
+.divImagens img:hover{
+	transform: scale(1.1);
+}
+
+@media (max-width: 750px) {
+    .divImagens img {
+        display: none;
+    }
+    
+    .divImagens img:first-child {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+/*blocos texto*/
+
+/*iframe*/
+#iframe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+@media (max-width: 850px) {
+	#iframe iframe {
+		width: 100%;
+		
+	}
+}
+/*iframe*/
+
+/*Âncora*/
+#ancoraJogos{
+	background-color: #ffb326;
+	margin-top: 3.2em;
+	width: 5em;
+	border-radius: 0.3em;
+}
+/*Âncora*/
+
+/*blocos jogos*/
+#halfLife, #counterStrike{
+	font: bold 1.5em "Oxanium", sans-serif;
+	text-align: center;
+}
+/*blocos jogos*/
+
+/*tabelas*/
+table {
+	border: 0.1em solid #ff8800;
+}
+
+.tabelaHL{
+	overflow-x: auto;
+}
+
+.tabelaCS{
+	overflow-x: auto;
+}
+
+.titulosTabelas{
+	font: 1em "Oxanium", sans-serif;;
+	text-align: center;
+	color: #fdba00;
+}
+
+
+
+table ul{
+	list-style-image: url(multimidia/iconeLista.png);
+}
+/*tabelas*/
+
+/*media print*/
+@media print {
+	nav {
+		display: none;
+	}
+	
+	body {
+		background-image: none;
+	}
+
+	.blocosTexto {
+		width: 100%;
+		margin-top: 0;
+		border: none;
+		box-shadow: none;
+	}
+
+	iframe, .tituloIframe {
+		display: none !important;
+	}
+
+	.divImagens img {
+		display: none !important;
+	}
+
+
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulário</title>	
+	<link rel="icon" href="multimidia/valveFavicon.png">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="estilosFormularios.css">
+</head>
+<body>
+
+<nav id="navPrincipal">
+<a href="index.html">Home</a>
+<a href="jogos.html">Jogos</a>
+Formulário	
+</nav>
+
+<br><br><br><br>
+
+
+<div id="externoForm">
+<div id="formulario">
+<form method="post">
+
+	<div class="blocosForm">
+		<h3>Cadastrar:</h3>
+		<label for="email">E-mail:</label>
+		<input type="email" name="email" id="email" placeholder="alt + m..." required accesskey="m">
+
+		<label for="senha">Senha:</label>
+		<input type="password" name="senha" id="senha" min="8" placeholder="alt + s..." required accesskey="s">
+	</div>
+
+
+	<div class="blocosForm">
+		<h3>Informações pessoais:</h3>
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome" minlength="3" maxlength="80" required placeholder="alt + n..." accesskey="n">  
+
+		<label for="idade">Idade:</label>
+		<input type="number" name="idade" id="idade" required min="16" max="130" placeholder="alt + i..." accesskey="i">
+
+		<label for="genero">Gênero:</label>
+		<div id="genero">
+		<input type="radio" name="genero" id="genero" checked>Feminino
+		<input type="radio" name="genero" id="genero">Masculino 
+		<input type="radio" name="genero" id="genero">Não-binário 
+		<input type="radio" name="genero" id="genero">Outro 
+		</div>
+	</div>
+
+	<div class="blocosForm">
+		<h3>Opinião sobre o site:</h3>
+		<label for="texto">Digite aqui:</label>
+		<textarea name="texto" id="texto" cols="35" rows="5" minlength="10" maxlength="200" required placeholder="alt + o..." accesskey="o"></textarea>
+
+		<label for="home">Página preferida:</label>
+		<select>
+			<option></option>
+			<option name="home" id="home">Home</option>
+			<option name="jogos" id="jogos">Jogos</option>
+			<option name="nenhuma" id="nenhuma">Nenhuma</option>
+		</select>
+	</div>
+
+	<input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar">
+</form>
+</div>
+
+
+
+</body>
+</html>
